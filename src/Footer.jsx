@@ -1,5 +1,9 @@
 const Footer = () => {
-  return <footer>copyright Olufemi REACT25</footer>;
+  return (
+    <footer>
+      <div>copyright Olufemi REACT25</div>
+    </footer>
+  );
 };
 
 export default Footer;

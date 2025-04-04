@@ -1,6 +1,52 @@
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
 #root {
+  box-sizing: border-box;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+header {
+  background-color: #aaa95a;
+  color: black;
+  margin: 0;
+  width: 100vw;
+}
+header h1 {
+  margin: 0;
+}
+main {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: #82816d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main div {
+  background-color: #414066;
+  color: white;
+  height: 30vh;
+  width: 15vw;
+  border-radius: 10px;
+  text-align: center;
+}
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin: 5px;
+}
+
+.name {
+  text-decoration: underline;
 }

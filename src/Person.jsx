@@ -1,7 +1,7 @@
 const Person = (props) => {
   return (
     <div>
-      <p>{props.name}</p>
+      <p className="name">{props.name}</p>
       <p>{props.title}</p>
       <p>{props.salary}</p>
       <p>{props.phone}</p>
