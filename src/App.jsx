@@ -1,4 +1,5 @@
 import "./App.css";
+import "./Person/Person.css"
 import Header from "./Header.jsx";
 import PersonList from "./Person/PersonList.jsx";
 import Footer from "./Footer.jsx";

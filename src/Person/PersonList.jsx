@@ -28,6 +28,7 @@ const PersonList = () => {
           key={employee.id}
           fanimal={animalEmojis[employee.animal]}
           reminder={status(employee.startDate)}
+          topSkills={employee.skills.join(", ")}
           {...employee}
         />
       ))}
