@@ -7,8 +7,6 @@ html {
   box-sizing: border-box;
   margin: 0 auto;
   text-align: center;
-  width: 100vw;
-  height: 100vh;
 }
 
 header {
@@ -16,17 +14,10 @@ header {
   color: black;
   margin: 0;
   width: 100%;
+  display: flex;
 }
 
-main {
-  height: 100%;
-  width: 100%;
-  padding: 5px;
-  background-color: #82816d;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+
 
 footer div {
   margin: 10px;

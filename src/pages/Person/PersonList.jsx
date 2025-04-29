@@ -1,6 +1,8 @@
 import PersonCard from "./PersonCard.jsx";
-import { employees } from "./employeeData.js";
-import { animalEmojis } from "./animalEmoji.js";
+import { employees } from "../../data/employeeData.js";
+import { animalEmojis } from "../../data/animalEmoji.js";
+import Header from "../../components/header/Header.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 
 const status = (startDateString) => {
   const today = new Date();
@@ -23,6 +25,8 @@ const status = (startDateString) => {
 const PersonList = () => {
   return (
     <>
+      <Header logo="HR APP" />
+      <main>
       {employees.map((employee) => (
         <PersonCard
           key={employee.id}
@@ -32,6 +36,8 @@ const PersonList = () => {
           {...employee}
         />
       ))}
+      </main>
+      <Footer />
     </>
   );
 };
