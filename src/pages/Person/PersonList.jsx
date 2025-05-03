@@ -1,3 +1,4 @@
+import "./Person.css";
 import PersonCard from "./PersonCard.jsx";
 import { employees } from "../../data/employeeData.js";
 import { animalEmojis } from "../../data/animalEmoji.js";
@@ -26,7 +27,7 @@ const PersonList = () => {
   return (
     <>
       <Header logo="HR APP" />
-      <main>
+      <main id="employees">
       {employees.map((employee) => (
         <PersonCard
           key={employee.id}

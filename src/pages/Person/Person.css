@@ -1,13 +1,13 @@
-main {
+#employees {
+  box-sizing: border-box;
   height: 100vh;
   width: 100vw;
   padding: 5px;
-  background-color: #82816d;
+  background-color: #9e9b68;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 
 .card {
   background-color: #414066;
@@ -17,7 +17,6 @@ main {
   border-radius: 10px;
   text-align: center;
   margin: 5px;
-  
 }
 .card p {
   margin: 3px;

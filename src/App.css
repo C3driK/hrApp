@@ -1,4 +1,4 @@
-html {
+ html {
   height: 100vh;
   width: 100vw;
 }
@@ -9,19 +9,20 @@ html {
   text-align: center;
 }
 
-header {
-  background-color: #aaa95a;
-  color: black;
-  margin: 0;
-  width: 100%;
+ main {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  padding: 5px;
+  background-color: #82816d;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
-
 
 footer div {
   margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} 

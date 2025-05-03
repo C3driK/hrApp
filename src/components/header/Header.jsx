@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router";
+import "./header.css";
 
 const Header = ({ logo }) => {
   return (
