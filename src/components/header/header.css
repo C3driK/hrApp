@@ -1,0 +1,35 @@
+header {
+  box-sizing: border-box;
+  background-color: #aaa95a;
+  color: black;
+  margin: 0;
+  width: 100vw;
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+}
+
+header a {
+  text-decoration: none;
+  padding-left: 5px;
+  margin: 0px;
+  color: black;
+}
+
+nav {
+  align-self: flex-end;
+  display: flex;
+}
+
+ul a {
+  display: inline-block;
+  margin: 5px;
+  text-decoration: none;
+  padding: 5px
+}
+ul a:hover {
+  background-color: white;
+  height: auto;
+  width: auto;
+  border-radius: 5px;
+}
