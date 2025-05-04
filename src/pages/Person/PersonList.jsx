@@ -23,20 +23,21 @@ const status = (startDateString) => {
   }
 };
 
-const PersonList = () => {
+//so booksData and setBooksData are props deconsructed
+const PersonList = ({ formData, setFormData }) => {
   return (
     <>
       <Header logo="HR APP" />
       <main id="employees">
-      {employees.map((employee) => (
-        <PersonCard
-          key={employee.id}
-          fanimal={animalEmojis[employee.animal]}
-          reminder={status(employee.startDate)}
-          topSkills={employee.skills.join(", ")}
-          {...employee}
-        />
-      ))}
+        {formData.map((employee) => (
+          <PersonCard
+            key={employee.id}
+            fanimal={animalEmojis[employee.animal]}
+            reminder={status(employee.startDate)}
+            topSkills={employee.skills.join(", ")}
+            {...employee}
+          />
+        ))}
       </main>
       <Footer />
     </>

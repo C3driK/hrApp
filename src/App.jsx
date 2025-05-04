@@ -7,10 +7,16 @@ import { useState } from "react";
 import { employees } from "./data/employeeData.js";
 
 function App() {
+  const [formData, setFormData] = useState(employees);
+
+  const addEmployeeHandler = (newPerson) => {
+    setFormData((prev) => [...prev, { ...newPerson, id: Date.now() }]);
+  };
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <PersonList />,
+      element: <PersonList formData={formData} setFormData={setFormData} />,
     },
     {
       path: "/about",
@@ -18,7 +24,7 @@ function App() {
     },
     {
       path: "/add",
-      element: <AddEmployee />,
+      element: <AddEmployee onAddEmployee={addEmployeeHandler} />,
     },
   ]);
   return <RouterProvider router={router} />;
