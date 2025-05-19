@@ -23,7 +23,7 @@ const status = (startDateString) => {
   }
 };
 
-//so booksData and setBooksData are props deconsructed
+//so booksData and setBooksData are props deconsructed gotten from App.jsx
 const PersonList = ({ formData, setFormData }) => {
   return (
     <>
