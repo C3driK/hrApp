@@ -1,7 +1,7 @@
 {
   "employees": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Aino Virtanen",
       "title": "HR Manager",
       "salary": 4200,
@@ -11,10 +11,14 @@
       "startDate": "2004-04-01",
       "location": "Helsinki",
       "department": "Human Resources",
-      "skills": ["Recruiting", "Communication", "Employee Relations"]
+      "skills": [
+        "Recruiting",
+        "Communication",
+        "Employee Relations"
+      ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Mikko Korhonen",
       "title": "Senior Developer",
       "salary": 4800,
@@ -24,10 +28,14 @@
       "startDate": "2025-02-15",
       "location": "Tampere",
       "department": "Engineering",
-      "skills": ["JavaScript", "React", "Node.js"]
+      "skills": [
+        "JavaScript",
+        "React",
+        "Node.js"
+      ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Liisa Mäkelä",
       "title": "Marketing Specialist",
       "salary": 3900,
@@ -37,10 +45,14 @@
       "startDate": "2025-02-10",
       "location": "Helsinki",
       "department": "Marketing",
-      "skills": ["Digital Marketing", "Content Creation", "Social Media"]
+      "skills": [
+        "Digital Marketing",
+        "Content Creation",
+        "Social Media"
+      ]
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Juha Nieminen",
       "title": "Finance Director",
       "salary": 5500,
@@ -50,10 +62,14 @@
       "startDate": "2016-01-20",
       "location": "Espoo",
       "department": "Finance",
-      "skills": ["Financial Planning", "Budgeting", "Risk Management"]
+      "skills": [
+        "Financial Planning",
+        "Budgeting",
+        "Risk Management"
+      ]
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Sanna Koskinen",
       "title": "UX Designer",
       "salary": 4300,
@@ -63,10 +79,14 @@
       "startDate": "2020-06-01",
       "location": "Turku",
       "department": "Design",
-      "skills": ["UI/UX Design", "Wireframing", "Prototyping"]
+      "skills": [
+        "UI/UX Design",
+        "Wireframing",
+        "Prototyping"
+      ]
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Antti Järvinen",
       "title": "Backend Developer",
       "salary": 4600,
@@ -76,10 +96,14 @@
       "startDate": "2018-11-05",
       "location": "Tampere",
       "department": "Engineering",
-      "skills": ["Python", "Django", "PostgreSQL"]
+      "skills": [
+        "Python",
+        "Django",
+        "PostgreSQL"
+      ]
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Elina Laine",
       "title": "Customer Success Manager",
       "salary": 4100,
@@ -89,10 +113,14 @@
       "startDate": "2025-03-15",
       "location": "Helsinki",
       "department": "Customer Service",
-      "skills": ["Customer Relations", "Problem Solving", "CRM Systems"]
+      "skills": [
+        "Customer Relations",
+        "Problem Solving",
+        "CRM Systems"
+      ]
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Petri Heikkinen",
       "title": "Project Manager",
       "salary": 4700,
@@ -102,10 +130,14 @@
       "startDate": "2017-03-20",
       "location": "Espoo",
       "department": "Operations",
-      "skills": ["Agile Methodologies", "Scrum", "Team Leadership"]
+      "skills": [
+        "Agile Methodologies",
+        "Scrum",
+        "Team Leadership"
+      ]
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Tiina Salonen",
       "title": "Content Writer",
       "salary": 3800,
@@ -115,10 +147,14 @@
       "startDate": "2020-01-10",
       "location": "Helsinki",
       "department": "Marketing",
-      "skills": ["Copywriting", "SEO", "Storytelling"]
+      "skills": [
+        "Copywriting",
+        "SEO",
+        "Storytelling"
+      ]
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Matti Hakala",
       "title": "Sales Representative",
       "salary": 4000,
@@ -128,7 +164,28 @@
       "startDate": "2019-05-01",
       "location": "Oulu",
       "department": "Sales",
-      "skills": ["Negotiation", "Client Management", "Presentations"]
+      "skills": [
+        "Negotiation",
+        "Client Management",
+        "Presentations"
+      ]
+    },
+    {
+      "id": "cbf2",
+      "name": "ythfthffg",
+      "title": "sdfdfsdf",
+      "salary": "223",
+      "phone": "3232",
+      "email": "jamesbond@gmail.com",
+      "fanimal": "Cat",
+      "startDate": "2025-04-15",
+      "location": "tampere",
+      "department": "engineering",
+      "skills": [
+        "javavasasas",
+        "hfmdds",
+        "fkjbfkjb"
+      ]
     }
   ]
 }

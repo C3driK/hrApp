@@ -4,7 +4,6 @@ import About from "./pages/about/About.jsx";
 import PersonList from "./pages/Person/PersonList.jsx";
 import { BrowserRouter, Routes, Route } from "react-router";
 import { useState, useEffect } from "react";
-import { employees } from "./data/employeeData.js";
 import axios from "axios";
 
 function App() {

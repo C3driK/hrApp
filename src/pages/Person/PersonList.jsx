@@ -24,7 +24,7 @@ const status = (startDateString) => {
 };
 
 //so booksData and setBooksData are props deconsructed gotten from App.jsx
-const PersonList = ({ formData, setFormData }) => {
+const PersonList = ({ formData }) => {
   return (
     <>
       <Header logo="HR APP" />
