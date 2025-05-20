@@ -3,6 +3,7 @@ import Footer from "../../components/footer/Footer";
 import "./addEmployee.css";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import axios from "axios";
 
 const AddEmployee = ({ onAddEmployee }) => {
   const [formData, setFormData] = useState({
@@ -29,22 +30,27 @@ const AddEmployee = ({ onAddEmployee }) => {
     e.preventDefault();
     const newEmployee = { ...formData, skills: formData.skills.split(", ") };
 
-    onAddEmployee(newEmployee);
-
-    setFormData({
-      name: "",
-      title: "",
-      salary: "",
-      phone: "",
-      email: "",
-      fanimal: "",
-      startDate: "",
-      location: "",
-      department: "",
-      skills: "",
-    });
-
-    navigate("/");
+    axios
+      .post("http://localhost:3001/employees", newEmployee)
+      .then((res) => {
+        onAddEmployee(res.data);
+        navigate("/");
+        setFormData({
+          name: "",
+          title: "",
+          salary: "",
+          phone: "",
+          email: "",
+          fanimal: "",
+          startDate: "",
+          location: "",
+          department: "",
+          skills: "",
+        });
+      })
+      .catch((err) => {
+        console.error("Failed to add employer:", err);
+      });
   };
 
   return (
