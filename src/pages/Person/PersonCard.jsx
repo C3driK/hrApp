@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { Link } from "react-router";
+
 const PersonCard = ({
   reminder,
   name,
@@ -11,6 +14,9 @@ const PersonCard = ({
   department,
   topSkills,
 }) => {
+  const [isEditing, setIsEditing] = useState(false);
+  const [newSalary, setNewSalary] = useState();
+
   return (
     <>
       <div className="card">
