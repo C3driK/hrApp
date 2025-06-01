@@ -1,5 +1,3 @@
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
 import "./addEmployee.css";
 import { useState } from "react";
 import { useNavigate } from "react-router";
@@ -55,7 +53,6 @@ const AddEmployee = ({ onAddEmployee }) => {
 
   return (
     <>
-      <Header logo="HR APP" />
       <div id="form-container">
         <h2>Add Employee</h2>
         <form onSubmit={handleSubmit}>
@@ -109,7 +106,7 @@ const AddEmployee = ({ onAddEmployee }) => {
             id="animal"
             type="text"
             name="fanimal"
-            value={formData.animal}
+            value={formData.fanimal}
             onChange={handleChange}
           />
 
@@ -151,7 +148,6 @@ const AddEmployee = ({ onAddEmployee }) => {
           <button type="submit">Add</button>
         </form>
       </div>
-      <Footer />
     </>
   );
 };

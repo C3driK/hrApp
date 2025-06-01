@@ -1,9 +1,6 @@
 import "./Person.css";
 import PersonCard from "./PersonCard.jsx";
-import { employees } from "../../data/employeeData.js";
 import { animalEmojis } from "../../data/animalEmoji.js";
-import Header from "../../components/header/Header.jsx";
-import Footer from "../../components/footer/Footer.jsx";
 
 const status = (startDateString) => {
   const today = new Date();
@@ -24,11 +21,17 @@ const status = (startDateString) => {
 };
 
 //so booksData and setBooksData are props deconsructed gotten from App.jsx
-const PersonList = ({ formData }) => {
+const PersonList = ({
+  formData,
+  onSalaryChange,
+  onLocationChange,
+  onDepartmentChange,
+  onSkillsChange,
+}) => {
   return (
     <>
-      <Header logo="HR APP" />
-      <main id="employees">
+      <div className="container">
+        <h1>Employees Catalog</h1>
         {formData.map((employee) => (
           <PersonCard
             key={employee.id}
@@ -36,10 +39,17 @@ const PersonList = ({ formData }) => {
             reminder={status(employee.startDate)}
             topSkills={employee.skills.join(", ")}
             {...employee}
+            onSalaryChange={(id, newSalary) => onSalaryChange(id, newSalary)}
+            onLocationChange={(id, newLocation) =>
+              onLocationChange(id, newLocation)
+            }
+            onDepartmentChange={(id, newDepartment) =>
+              onDepartmentChange(id, newDepartment)
+            }
+            onSkillsChange={(id, newSkills) => onSkillsChange(id, newSkills)}
           />
         ))}
-      </main>
-      <Footer />
+      </div>
     </>
   );
 };

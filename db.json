@@ -4,17 +4,17 @@
       "id": "1",
       "name": "Aino Virtanen",
       "title": "HR Manager",
-      "salary": 4200,
+      "salary": 420,
       "phone": "040-1234567",
       "email": "aino.virtanen@example.com",
       "animal": "Owl",
       "startDate": "2004-04-01",
-      "location": "Helsinki",
-      "department": "Human Resources",
+      "location": "Tampere",
+      "department": "IT",
       "skills": [
         "Recruiting",
         "Communication",
-        "Employee Relations"
+        "Employee Friends"
       ]
     },
     {

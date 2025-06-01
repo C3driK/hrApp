@@ -1,4 +1,5 @@
 import "./App.css";
+import Root from "./pages/Root.jsx";
 import AddEmployee from "./pages/addEmployee/AddEmployee.jsx";
 import About from "./pages/about/About.jsx";
 import PersonList from "./pages/Person/PersonList.jsx";
@@ -20,37 +21,95 @@ function App() {
     setFormData((prev) => [...prev, newPerson]);
   };
 
+  const handleSalaryChange = (id, newSalary) => {
+    axios
+      .patch(`http://localhost:3001/employees/${id}`, { salary: newSalary })
+      .then((res) => {
+        setFormData((prev) =>
+          prev.map((employee) => (employee.id === id ? res.data : employee))
+        );
+      })
+      .catch((err) => {
+        console.error("Failed to update salary", err);
+      });
+  };
+
+  const handleLocationChange = (id, newLocation) => {
+    axios
+      .patch(`http://localhost:3001/employees/${id}`, { location: newLocation })
+      .then((res) => {
+        setFormData((prev) =>
+          prev.map((employee) => (employee.id === id ? res.data : employee))
+        );
+      })
+      .catch((err) => {
+        console.error("Failed to update location", err);
+      });
+  };
+
+  const handleDepartmentChange = (id, newDepartment) => {
+    axios
+      .patch(`http://localhost:3001/employees/${id}`, {
+        department: newDepartment,
+      })
+      .then((res) => {
+        setFormData((prev) =>
+          prev.map((employee) => (employee.id === id ? res.data : employee))
+        );
+      })
+      .catch((err) => {
+        console.error("Failed to update department", err);
+      });
+  };
+
+  const handleSkillsChange = (id, newSkills) => {
+    const skillsArray =
+      typeof newSkills === "string"
+        ? newSkills
+            .split(",")
+            .map((skill) => skill.trim())
+            .filter((skill) => skill.length > 0)
+        : newSkills;
+    axios
+      .patch(`http://localhost:3001/employees/${id}`, {
+        skills: skillsArray,
+      })
+      .then((res) => {
+        setFormData((prev) =>
+          prev.map((employee) => (employee.id === id ? res.data : employee))
+        );
+      })
+      .catch((err) => {
+        console.error("failed to update skills", err);
+      });
+  };
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/"
-          element={<PersonList formData={formData} setFormData={setFormData} />}
-        />
-        <Route path="/about" element={<About />} />
-        <Route
-          path="/add"
-          element={<AddEmployee onAddEmployee={addEmployeeHandler} />}
-        />
+        <Route path="/" element={<Root />}>
+          <Route index element={<About />} />
+          <Route
+            path="/employees"
+            element={
+              <PersonList
+                formData={formData}
+                onSalaryChange={handleSalaryChange}
+                onLocationChange={handleLocationChange}
+                onDepartmentChange={handleDepartmentChange}
+                onSkillsChange={handleSkillsChange}
+              />
+            }
+          />
+
+          <Route
+            path="/add"
+            element={<AddEmployee onAddEmployee={addEmployeeHandler} />}
+          />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
-
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <PersonList formData={formData} setFormData={setFormData} />,
-  //   },
-  //   {
-  //     path: "/about",
-  //     element: <About />,
-  //   },
-  //   {
-  //     path: "/add",
-  //     element: <AddEmployee onAddEmployee={addEmployeeHandler} />,
-  //   },
-  // ]);
-  return <RouterProvider router={router} />;
 }
 
 export default App;

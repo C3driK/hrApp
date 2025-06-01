@@ -10,7 +10,7 @@ const Header = ({ logo }) => {
       <nav>
         <ul>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/employees">Employees</NavLink>
           <NavLink to="/add">Add-Employee</NavLink>
         </ul>
       </nav>
